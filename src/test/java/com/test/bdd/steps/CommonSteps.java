@@ -1,6 +1,8 @@
 package com.test.bdd.steps;
 
 import com.test.bdd.Addition;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -27,6 +29,6 @@ public class CommonSteps {
 
     @Then("^I should get addition result as (\\d+)$")
     public void i_should_get_addition_result(int arg1) throws Throwable {
-        assertEquals(add.getSum(),arg1);
+        assertEquals(add.getSum(), arg1);
     }
 }
