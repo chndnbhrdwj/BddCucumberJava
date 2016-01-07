@@ -1,5 +1,6 @@
 package com.test.bdd.steps;
 
+import com.test.bdd.CucumberHooks;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -16,11 +17,7 @@ public class Hooks {
 
     @After
     public void after(Scenario s){
-        System.out.println("After hook kicked off for scenario " + getStatus(s));
+        System.out.println("After hook kicked off for scenario " + new CucumberHooks().getStatus(s));
     }
 
-    public String getStatus(Scenario s) {
-        return "Status update: " + s.getSourceTagNames() + " " + s.getId() + " " + s.getStatus();
-
-    }
 }
