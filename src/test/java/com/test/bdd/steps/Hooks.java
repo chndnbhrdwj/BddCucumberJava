@@ -18,4 +18,9 @@ public class Hooks {
     public void after(Scenario s){
         System.out.println("After hook kicked off for scenario "+s.getName()+"***"+s.isFailed());
     }
+
+    public void getStatus(Scenario s) {
+        System.out.println("Status update: " + s.getSourceTagNames() + " " + s.getId() + " " + s.getStatus());
+
+    }
 }
