@@ -11,7 +11,7 @@ public class Hooks {
 
     @Before
     public void before(Scenario s){
-        System.out.println("After hook kicked off for scenario "+s.getName()+"***"+s.getClass());
+        System.out.println("Before hook kicked off for scenario " + s.getName() + "***" + s.getClass());
     }
 
     @After
