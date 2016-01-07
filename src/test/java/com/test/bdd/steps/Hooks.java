@@ -16,11 +16,11 @@ public class Hooks {
 
     @After
     public void after(Scenario s){
-        System.out.println("After hook kicked off for scenario "+s.getName()+"***"+s.isFailed());
+        System.out.println("After hook kicked off for scenario " + getStatus(s));
     }
 
-    public void getStatus(Scenario s) {
-        System.out.println("Status update: " + s.getSourceTagNames() + " " + s.getId() + " " + s.getStatus());
+    public String getStatus(Scenario s) {
+        return "Status update: " + s.getSourceTagNames() + " " + s.getId() + " " + s.getStatus();
 
     }
 }
